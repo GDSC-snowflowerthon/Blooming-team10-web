@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import "./bigGoalPage.css";
+import "./styels/BigGoalPage.css";
 
 function BigGoalPage() {
     const navigate = useNavigate();

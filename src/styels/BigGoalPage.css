@@ -1,0 +1,36 @@
+.bigGoalPage {
+    align-items: center;
+    width: 393px;
+    height: 852px;
+    background: #F6FBFF;
+}
+
+h1 {
+    width: 235px;
+    color: #42A5F5;
+    font-family: Spoqa Han Sans Neo;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding: 100px 0px 0px 0px;
+}
+
+input {
+    width: 325px;
+    height: 50px;
+    flex-shrink: 0;
+    fill: #FFF;
+}
+
+.goSGoal {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-size: 24px;
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+    background-color: #42A5F5;
+    margin: 50px 0px 0px 250px;
+}
