@@ -1,0 +1,48 @@
+#showFlowerPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pageTitle {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.pageTitle #title{
+    color: #42A5F5;
+    font-size: 30px;
+    font-style: normal;
+    align-items: flex-start;
+    margin: 19px 0px 0px 0px;
+}
+
+.pageTitle #day{
+    color: #90CAF9;
+    font-family: Pretendard;
+    font-size: 25px;
+    font-style: normal;
+    margin: 0px;
+}
+
+#snowflower {
+    display : inline;
+    position: relative;
+
+}
+
+#chart, #flowerOutline {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#charWrapper {
+}
+
+#flowerOutline {
+    fill: white;
+
+}
+

@@ -1,0 +1,14 @@
+.DatesTableWrapper {
+    flex-shrink: 0;
+    width:min-content;
+    height: 493px;
+    margin-left: 240px;
+}
+
+.DatesTableWrapper .table #space{
+    padding : 0px 0px 12px 0px;
+}
+
+.DatesTableWrapper .table .date{
+    padding : 12px 0px;
+}

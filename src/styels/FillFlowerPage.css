@@ -1,0 +1,85 @@
+.fillFlowerPage {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.pageTitle {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 117px 30px 38px 30px;
+    align-items: center;
+}
+
+.pageTitle #title{
+    color: #42A5F5;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    margin: 0px;
+}
+
+.pageTitle #percentage{
+    color: #464646;
+    font-family: Pretendard;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    margin: 0px;
+}
+
+#branchWrapper {
+    width: 180px;
+    height: 494px;
+    margin-bottom: 30px;
+    
+
+}
+
+#eraseBranch {
+    width: 55px;
+    height: 490px;
+    background: #F6FBFF;
+    z-index: 1;
+}
+
+#fillBranch {
+    width: 55px;
+    height: 490px;
+    background: #42A5F5;
+
+}
+
+#branch, #eraseBranch, #fillBranch {
+    position:absolute;
+}
+
+#eraseBranch, #fillBranch {
+    margin-left: 36px;
+}
+
+#dateTable{
+    position: relative;
+}
+
+
+button {
+    all : unset;
+}
+
+#buttonWrapper{
+    text-align: center;
+}
+
+#complete {
+    width: 189px;
+    height: 48px;
+    flex-shrink: 0;
+    background: #42A5F5;
+    border-radius: 10px;
+    box-shadow: 0px 8px 10px -8px rgb(33, 35, 48);
+    color: white;
+    text-align: center;
+}
