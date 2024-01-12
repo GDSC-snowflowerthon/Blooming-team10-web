@@ -1,6 +1,6 @@
 .StoragePage {
     width: 100%;
-    height: 250vh;
+    height: 215vh;
     background: url(../assets/image/backgroundStorage.png) center/cover fixed;
     position: relative;
 }
@@ -35,7 +35,7 @@
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    margin: 0px 0px 0px 0px;
+    margin: 0px;
 }
 
 .completedTime {
@@ -45,7 +45,7 @@
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    margin: 0px 0px 0px 75px;
+    margin : 0px;
 }
 
 .SnowFlower {
@@ -62,4 +62,9 @@
     top: 50px;
     bottom: 10px;
     left: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
+

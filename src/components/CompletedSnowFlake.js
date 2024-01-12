@@ -1,8 +1,7 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
+
 import SnowFlower4 from "../components/SnowFlower4";
->>>>>>> dd628cdca7d854f839980fa206b28ef5ad25bdc1
+
 import '../styels/StoragePage.css';
 
 function SnowFlower() {

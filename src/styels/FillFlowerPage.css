@@ -110,3 +110,8 @@ button {
     color: rgb(44, 45, 46);
     text-align: center;
 }
+
+.goStorage {
+    border: transparent;
+    background-color: #F6FBFF;
+}
