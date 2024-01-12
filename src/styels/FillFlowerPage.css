@@ -1,0 +1,112 @@
+
+
+#xButton {
+    position: relative;
+    left : 316px;
+    top : 40px;
+}
+
+#fillPageTitle {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 60px;
+    align-items: center;
+}
+
+#fillPageTitle #title{
+    color: #42A5F5;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+}
+
+#fillPageTitle #percentage{
+    color: #464646;
+    font-family: Pretendard;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+}
+
+#branchWrapper {
+    width: 180px;
+    height: 494px;
+    position: absolute;
+    top:200px;
+}
+
+#oneBranchWrapper {
+    left:-158px;
+    top: -15px;
+}
+
+#branchLine {
+    left: -106px;
+    top: -16px;
+}
+
+
+#oneBranchWrapper, #branchLine {
+    position:absolute;
+}
+
+
+#datesWrapper{
+    display: inline-flex;
+    flex-wrap: nowrap;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+    width: 180px;
+    height: 494px;
+    position: absolute;
+    left : 184px;
+    top : 148px;
+}
+
+.date {
+    margin-top: 26px;
+    color: #767676;
+    font-family: Pretendard;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.hiddenText {
+    visibility: hidden;
+}
+
+button {
+    all : unset;
+}
+
+#buttonWrapper{
+    position: absolute;
+    top:720px;
+    text-align: center;
+    margin-top: 0px;
+}
+
+#beforeComplete {
+    width: 189px;
+    height: 48px;
+    flex-shrink: 0;
+    background: #42A5F5;
+    border-radius: 10px;
+    box-shadow: 0px 8px 10px -8px rgb(33, 35, 48);
+    color: white;
+    text-align: center;
+}
+
+#afterComplete {
+    width: 189px;
+    height: 48px;
+    flex-shrink: 0;
+    background: #777a7b;
+    border-radius: 10px;
+    box-shadow: 0px 8px 10px -8px rgb(33, 35, 48);
+    color: rgb(44, 45, 46);
+    text-align: center;
+}

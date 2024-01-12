@@ -1,0 +1,44 @@
+.SmallGoalsTable{
+    border-radius: 15px;
+    background-color: #FFFFFF;
+    flex-shrink: 0;
+
+    width: 325px;
+    height: 321px;
+
+    box-shadow: 0px 8px 10px -6px rgb(33, 35, 48);
+}
+
+
+.SmallGoalsTable .table {
+    padding : 0px 6px;
+    width: 325px;
+    height: 321px;
+    font-weight: 500;
+    font-size: 16x;
+    color: #3A4C5B;
+
+    display: flex;
+    flex-direction: column;
+    align-content: stretch;
+    justify-content: space-evenly;
+    align-items: center
+}
+
+
+.table .tr {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    width: inherit;
+    border-bottom: 1px #E6EFF5 solid;
+    margin-top: 12px;
+    padding-bottom: 12px;
+}
+
+#td2 {
+    width: 60%;
+    text-align: center;
+}
+

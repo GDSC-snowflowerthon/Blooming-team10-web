@@ -1,0 +1,52 @@
+#profileIcon {
+    position: absolute;
+    margin-left: 260px;
+}
+
+#showPageTitle {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin: 37px 0px 0px 16px;
+}
+
+#showPageTitle #title{
+    color: #42A5F5;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    margin: 1px 0px 0px 0px;
+}
+
+#showPageTitle #day{
+    color: #90CAF9;
+    font-family: Pretendard;
+    font-weight: 700;
+    font-size: 25px;
+    font-style: normal;
+    margin: 0px;
+}
+
+
+#smallGoalTable {
+    align-items: center;
+}
+
+#bGoal {
+    color: #767676;
+    text-align: center;
+    font-family: Spoqa Han Sans Neo;
+    font-size: 23px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+#flower {
+    position : absolute;
+    top : 86px;
+}
+
+#snowman {
+    padding : 0px 0px 0px 260px;
+}
