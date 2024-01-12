@@ -1,0 +1,86 @@
+.bigGoalPage {
+    align-items: center;
+    width: 393px;
+    height: 852px;
+    background: #F6FBFF;
+}
+
+.showPrsnData {
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+    padding: 15px 0px 0px 320px;
+}
+
+h1 {
+    width: 235px;
+    color: #42A5F5;
+    font-family: Spoqa Han Sans Neo;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding: 35px 0px 0px 30px;
+}
+
+input {
+    width: 325px;
+    height: 50px;
+    flex-shrink: 0;
+    fill: #FFF;
+    border-radius: 20px;
+    border: transparent;
+    color: #999;
+    text-align: center;
+    font-family: Spoqa Han Sans Neo;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0px 0px 30px 30px;
+}
+
+.goSGoalbackgroud {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    border-radius: 100%;
+    border: transparent;
+    background-color: transparent;
+    width: 30px;
+    height: 30px;
+    margin: 0px 0px 400px 325px;
+}
+
+.goSGoalbutton {
+    width: 35px;
+    height: 35px;
+    padding: 0px 40px 0px 0px;
+}
+
+.SGoalbyAItext {
+    color: #42A5F5;
+    text-align: center;
+    font-family: Spoqa Han Sans Neo;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 30px;
+    margin: 22.5px 0px 0px 0px;
+}
+
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0px 0px 142px;
+}
+
+.goStorage {
+    border: transparent;
+    background-color: #F6FBFF;
+}
+
+.snowman {
+    padding: 0px 0px 0px 260px;
+}
