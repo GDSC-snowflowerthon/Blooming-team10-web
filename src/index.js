@@ -30,12 +30,10 @@ const routes = [
   {
     path : "/big",
     element : <BigGoalPage/>,
-    children : [
-      {
-        path : "small",
-        element : <SmallGoalPage/>,
-      },
-    ]
+  },
+  {
+    path : "/small",
+    element : <SmallGoalPage />
   },
   {
     path : "storage",

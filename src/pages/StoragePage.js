@@ -1,18 +1,23 @@
-import React from "react";
-import { useNavigate, Outlet } from "react-router-dom";
-import "./SnowFlowerPage.css";
+// import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+// import axios from "axios";
+import SnowFlower from "../components/CompletedSnowFlake";
+import backIcon from '../assets/image/backIcon.svg';
+import "../styels/StoragePage.css";
 
- const StoragePage = ()=>{
-    const navigate = useNavigate();
-    
-    return (
+function StoragePage() {
+
+  const navigate = useNavigate();
+  
+  return (
+    <>
     <div className="StoragePage">
-        <h2>목표</h2>
-        <h2>완성된 눈송이~</h2>
-        <button onClick={() => navigate("SnowFlowerPage")}>SnowFlowerPage</button>
-        <Outlet/>
-    </div>
-    )
-};
+        <button className="backHome" onClick={() => navigate("/")}>
+            <img className="backIcon" src={backIcon} alt="backHome"/>
+        </button>
+        <SnowFlower />
+    </div></>
+  );
+}
 
 export default StoragePage;

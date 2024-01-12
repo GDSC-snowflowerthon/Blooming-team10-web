@@ -5,6 +5,13 @@
     background: #F6FBFF;
 }
 
+.showPrsnData {
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+    padding: 15px 0px 0px 320px;
+}
+
 h1 {
     width: 235px;
     color: #42A5F5;
@@ -13,7 +20,7 @@ h1 {
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    padding: 100px 5px 0px 0px;
+    padding: 35px 0px 0px 30px;
 }
 
 input {
@@ -21,16 +28,59 @@ input {
     height: 50px;
     flex-shrink: 0;
     fill: #FFF;
+    border-radius: 20px;
+    border: transparent;
+    color: #999;
+    text-align: center;
+    font-family: Spoqa Han Sans Neo;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0px 0px 30px 30px;
 }
 
-.goSGoal {
+.goSGoalbackgroud {
     display: flex;
     align-items: center;
     text-align: center;
-    font-size: 24px;
+    border-radius: 100%;
+    border: transparent;
+    background-color: transparent;
     width: 30px;
     height: 30px;
-    flex-shrink: 0;
-    background-color: #42A5F5;
-    margin: 50px 0px 0px 250px;
+    margin: 0px 0px 400px 325px;
+}
+
+.goSGoalbutton {
+    width: 35px;
+    height: 35px;
+    padding: 0px 40px 0px 0px;
+}
+
+.SGoalbyAItext {
+    color: #42A5F5;
+    text-align: center;
+    font-family: Spoqa Han Sans Neo;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 30px;
+    margin: 22.5px 0px 0px 0px;
+}
+
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0px 0px 142px;
+}
+
+.goStorage {
+    border: transparent;
+    background-color: #F6FBFF;
+}
+
+.snowman {
+    padding: 0px 0px 0px 260px;
 }
