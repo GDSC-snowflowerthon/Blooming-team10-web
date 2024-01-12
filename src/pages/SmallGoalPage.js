@@ -16,9 +16,6 @@ function SmallGoalPage() {
     const backBGoal = () => {
       navigate('/big');
     };
-    console.log("in small");
-    console.log(location.state.subgoalList);
-    console.log("--");
 
     const [bGoal, setBGoal] = useState();
         const saveBGoal = (e) => {

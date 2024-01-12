@@ -7,75 +7,91 @@ import PointLine from "../components/PointLine";
 import OneBranch from "../components/OneBranch";
 import { useNavigate, useLocation } from 'react-router-dom';
 import moment from "moment";
-
-
+import axios from "axios";
 
 
 function FillFlowerPage({}) {
-  const [done, setDone] = useState(false);
-  const [subgoalName, setSubgoalName] = useState("default");
-  const [doneDataList, setDoneDataList] = useState(["24-01-01","24-01-02","24-01-03","24-01-04", "24-01-06"]); //
-  const [doneDataListForDraw, setDoneDataListForDraw] = useState(["24-01-01","24-01-02","24-01-03","24-01-04", "24-01-06"].concat(Array(10 - doneDataList.length).fill("0")));
-  const [doneDatesCount, setDonDatesCount] = useState(doneDataList.length);
-  
+
   const navigate = useNavigate();
   const location = useLocation();
 
-  console.log(location.state);
 
-  console.log(doneDataList);
+  const [done, setDone] = useState(false);
+  const [subgoalName, setSubgoalName] = useState(location.state[1].subgoalName);
+  const [doneDateList, setDoneDataList] = useState(location.state[1].doneDateList);
+  const [doneDatesCount, setDonDatesCount] = useState(doneDateList.filter(date => date !== null).length);
+  
+  const goalId = location.state[0];
+  const subGoalId = location.state[1].subGoalId;
+  const userId = location[2];
+  const nickname = location[3];
+
   // index+1 해서 사용
 
 
-  function complete() {
+  const complete = async (e) => {
     var newCount = doneDatesCount;
-    doneDataListForDraw[doneDatesCount] = moment().format("YY-MM-DD");
+    doneDateList[doneDatesCount] = moment().format("YY-MM-DD");
     newCount += 1;
     setDonDatesCount(newCount);
     setDone(true);
 
     const newDate = document.querySelector(`.date:nth-child(${newCount})`);
     newDate.style.color = "#000"
+
+    const url = "http://15.165.203.215:8080";
+    const api = `/subgoal/${goalId}/detail/${subGoalId}`;
+    console.log(url+api);
+    await axios.post(url+api, {withCredentials:true}).then((res) => {
+    }).catch((err)=>{
+        console.log("err");
+        console.log(err);
+    })
   }
 
   const today = moment().format("M월 D일");
 
+  const getData = async (e) => {
 
-  //page 로드와 동시에 데이터 주고 받기
-  //subgoalName, doneDataList
+  }
+  
+  getData();
 
-
-  return (
-    <div id="fillFlowerPage">
-      <a onClick={() => {navigate(-1);}}><X id="xButton"/></a>
-      <div id='fillPageTitle'>
-        <p id="title">{subgoalName}</p>
-        <p id="percentage">{doneDatesCount*10}%</p>
-      </div>
-      <div className='ComponentsClass'>
-        <div id="branchWrapper">
-          <div id="oneBranchWrapper">
-            <OneBranch id="oneBranch" height={490 - 49*doneDatesCount}/>
+  if (doneDateList === null) {
+    return null;
+  } else {
+    return (
+      <div id="fillFlowerPage">
+        <a onClick={() => {navigate("/", {state:{userId:userId, nickname:nickname}});}}><X id="xButton"/></a>
+        <div id='fillPageTitle'>
+          <p id="title">{subgoalName}</p>
+          <p id="percentage">{doneDatesCount*10}%</p>
+        </div>
+        <div className='ComponentsClass'>
+          <div id="branchWrapper">
+            <div id="oneBranchWrapper">
+              <OneBranch id="oneBranch" height={490 - 49*doneDatesCount}/>
+            </div>
+            <Branch id="branchLine"/>
           </div>
-          <Branch id="branchLine"/>
-        </div>
-        <PointLine id="pointLine" y={490 - 49*doneDatesCount}/>
-        <div id="datesWrapper">
-          {doneDataListForDraw.map((item, index) => (
-            item === "0"
-            ?  <div key={index} className={"date hiddenText"}>{item}</div>
-            : <div key={index} className={"date"}>{item}</div>
-          ))}
-        </div>
-        <div id="buttonWrapper">
-          { done ? 
-            <button id="afterComplete">오늘은 이미 완료했어요</button> 
-            : <button id="beforeComplete" onClick={complete}>{today} 완료</button>
-          }
+          <PointLine id="pointLine" y={490 - 49*doneDatesCount}/>
+          <div id="datesWrapper">
+            {doneDateList.map((item, index) => (
+              item === null
+              ?  <div key={index} className={"date hiddenText"}>{item}</div>
+              : <div key={index} className={"date"}>{item}</div>
+            ))}
+          </div>
+          <div id="buttonWrapper">
+            { done ? 
+              <button id="afterComplete">오늘은 이미 완료했어요</button> 
+              : <button id="beforeComplete" onClick={complete}>{today} 완료</button>
+            }
+          </div>
         </div>
       </div>
-    </div>
-  );
+    );
+  }
 }
 
 export default FillFlowerPage;
