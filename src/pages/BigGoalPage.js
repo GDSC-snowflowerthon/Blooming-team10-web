@@ -114,7 +114,6 @@ function BigGoalPage() {
           </Modal>
         </button>
         <button className="goStorage" onClick={goStorage}>
-          <img className="snowman" src={snowmanUrl} alt="snowman"></img>
         </button>
         </div>
       </div>

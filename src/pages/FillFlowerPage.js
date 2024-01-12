@@ -22,9 +22,10 @@ function FillFlowerPage({}) {
   const [doneDatesCount, setDonDatesCount] = useState(doneDateList.filter(date => date !== null).length);
   
   const goalId = location.state[0];
-  const subGoalId = location.state[1].subGoalId;
+  const subGoalId = location.state[1].subgoalId;
   const userId = location[2];
   const nickname = location[3];
+  console.log(location.state);
 
   // index+1 해서 사용
 
@@ -43,6 +44,7 @@ function FillFlowerPage({}) {
     const api = `/subgoal/${goalId}/detail/${subGoalId}`;
     console.log(url+api);
     await axios.post(url+api, {withCredentials:true}).then((res) => {
+      console.log(res);
     }).catch((err)=>{
         console.log("err");
         console.log(err);
@@ -62,7 +64,7 @@ function FillFlowerPage({}) {
   } else {
     return (
       <div id="fillFlowerPage">
-        <a onClick={() => {navigate("/", {state:{userId:userId, nickname:nickname}});}}><X id="xButton"/></a>
+        <a onClick={() => {navigate(-1);}}><X id="xButton"/></a>
         <div id='fillPageTitle'>
           <p id="title">{subgoalName}</p>
           <p id="percentage">{doneDatesCount*10}%</p>
