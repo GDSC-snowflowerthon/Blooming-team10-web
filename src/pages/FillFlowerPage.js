@@ -7,7 +7,6 @@ import PointLine from "../components/PointLine";
 import OneBranch from "../components/OneBranch";
 import { useNavigate, useLocation } from 'react-router-dom';
 import moment from "moment";
-import { count } from 'd3';
 
 
 
@@ -21,6 +20,8 @@ function FillFlowerPage({}) {
   
   const navigate = useNavigate();
   const location = useLocation();
+
+  console.log(location.state);
 
   console.log(doneDataList);
   // index+1 해서 사용

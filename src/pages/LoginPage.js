@@ -23,19 +23,27 @@ function LoginPage () {
         checkUser();
     }
 
+
+
     const checkUser = async (e) => {
         const url = "http://15.165.203.215:8080";
+        const api = "/user/login";
 
-        await axios.post(url+"/user/login", {
+        await axios.post(url+api, {
             loginId : id,
             password : pw
-        }).then((res) => {
+        }, {withCredentials:true}).then((res) => {
             if (res.data.code === 200) {
-                if (res.data.result.hasGoal) {
-                    navigate("/");
-                } else {
-                    navigate("/big");
+                console.log(res.data.result);
+                console.log("from login");
+                console.log(res.data.result.hasGoal);
+                console.log(res.data.result.activeGoalId);
+                if (!res.data.hasGoal) {
+                    navigate("/big", {state:res.data.result});
                 }
+                if (res.data.result.activeGoalId > 0) {
+                    navigate("/", {state:res.data.result});
+                } 
             } else if (res.data.code === 400) {
                 console.log(res.data.code);
                 /*setPopup({

@@ -3,13 +3,16 @@ import { useNavigate } from "react-router-dom";
 import exitButton from "../assets/image/exitButton.svg";
 import '../styels/SmallGoalPage.css';
 
-function SGoal() {
-    const [subGoal1, setSubGoal1] = useState("");
-    const [subGoal2, setSubGoal2] = useState("");
-    const [subGoal3, setSubGoal3] = useState("");
-    const [subGoal4, setSubGoal4] = useState("");
-    const [subGoal5, setSubGoal5] = useState("");
-    const [subGoal6, setSubGoal6] = useState("");
+function SGoal({data}) {
+
+    
+    const [subGoal1, setSubGoal1] = useState(data[0]);
+    const [subGoal2, setSubGoal2] = useState(data[1]);
+    const [subGoal3, setSubGoal3] = useState(data[2]);
+    const [subGoal4, setSubGoal4] = useState(data[3]);
+    const [subGoal5, setSubGoal5] = useState(data[4]);
+    const [subGoal6, setSubGoal6] = useState(data[5]);
+
     const handleChangeSGoal1 = (e) => {
         setSubGoal1(e.target.value);
     };
@@ -28,10 +31,7 @@ function SGoal() {
     const handleChangeSGoal6 = (e) => {
         setSubGoal6(e.target.value);
     };
-    const navigate = useNavigate();
-    const goshowFlowerPage = () => {
-        navigate(('/'));
-    }
+
     return (
     <>
     <div id="SGoal">
@@ -71,7 +71,6 @@ function SGoal() {
                 <img className="exitButton6" src={exitButton} alt="exitButton6"/>
             </button>
         </div>
-        <button className="completeButton" onClick={goshowFlowerPage}>완료</button>
     </div></>
     );
 }

@@ -30,7 +30,8 @@ function SignupPage () {
 
     const sendRegisterInfo = async() => {
         const url = "http://15.165.203.215:8080";
-        await axios.post( url+"/user/signup", {
+        const api = "/user/signup";
+        await axios.post( url+api, {
             loginId : id,
             nickname : nickname,
             password : pw

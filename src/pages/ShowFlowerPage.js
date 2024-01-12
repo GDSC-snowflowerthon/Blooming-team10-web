@@ -6,6 +6,8 @@ import { useState } from 'react';
 import {ReactComponent as Profile} from "../assets/image/profile.svg";
 import moment from "moment";
 import {ReactComponent as Snowman} from "../assets/image/snowman.svg";
+import {useLocation} from "react-router-dom";
+import axios from "axios";
 
 
 const data = [
@@ -25,11 +27,55 @@ const data = [
 
 function ShowFlowerPage() {
 
-  const nickname = "나여이";
+  const location = useLocation();
+  const userId = location.state.userId;
+  const nickname = location.state.nickname;
+  const goalId = location.state.activeGoalId;
+
+  console.log(userId + " : " + goalId );
+
+  //const [data, setData] = useState([]);
+
+  const checkUser = async (e) => {
+    const url = "http://15.165.203.215:8080";
+    const api = `/subgoal/${goalId}/progress`;
+
+    console.log(url+api);
+
+    await axios.get(url+api, {
+      params : {userId : userId}
+    }, {withCredentials:true}).then((res) => {
+      console.log(res);
+        if (res.data.code === 200) {
+            console.log(res.data.code);
+            console.log(res.data.result);
+            //setData(res.data.result)
+        } else if (res.data.code === 400) {
+            console.log(res.data.code);
+            /*setPopup({
+                open:true,
+                title:"Fail",
+                message: res.data.message
+            });*/
+        }
+    }).catch((err)=>{
+        console.log("err");
+        console.log(err);
+    }).then((res) => {
+      console.log(res);
+    })
+  }
+  
+  checkUser();
+
   const createdAt = new Date(data[2].goalCreateDate);
   const today = new Date();
   const dayCount = moment(today).diff(createdAt, "days");
+
+  const [goalName, setGoalName] = useState(data.goalName);
   //nickname 로그인 후에 받아와야 함
+
+
   
   return (
     <div id="showFlowerPage">
