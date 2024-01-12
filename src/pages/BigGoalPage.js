@@ -7,11 +7,12 @@ import goSmallGoal from '../assets/image/goSGoal.png';
 import loading from '../assets/image/loading.svg';
 import snowmanUrl from "../assets/image/snowman.png";
 import "../styels/BigGoalPage.css";
+import "../styels/GlobalStyle.css";
 
 function BigGoalPage() {
   const navigate = useNavigate();
   const goStorage = () => {
-    navigate('storage');
+    navigate('/storage');
   }
   const [bGoal, setBGoal] = useState();
     const saveBGoal = (e) => {
@@ -56,6 +57,7 @@ function BigGoalPage() {
   };
     return (
       <div className="bigGoalPage">
+        <div className='componentsClass'>
         <img className="showPrsnData" src={showPrsnData} alt="showPrsnData" />
         <h1>새로운 목표 설정</h1>
         <input type="text" id="inputBGoal" name="inputBGoal"
@@ -71,6 +73,7 @@ function BigGoalPage() {
         <button className="goStorage" onClick={goStorage}>
           <img className="snowman" src={snowmanUrl} alt="snowman"></img>
         </button>
+        </div>
       </div>
     )
   }

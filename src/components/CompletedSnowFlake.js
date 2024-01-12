@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styels/storagePage.css';
+import '../styels/StoragePage.css';
 
 function SnowFlower() {
     const thisBGoal = "안녕";

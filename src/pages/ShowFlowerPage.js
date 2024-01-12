@@ -43,7 +43,7 @@ function ShowFlowerPage() {
         <SnowFlower4 id="flower" data={data[3].subgoalList}/>
         <h2 id="bGoal">10kg 감량하기</h2>
         <SmallGoalsTable id="smallGoalTable" data={data}/>
-        <Snowman id="snowman"/>
+        <Snowman className="snowman"/>
       </div>
     </div>
   );

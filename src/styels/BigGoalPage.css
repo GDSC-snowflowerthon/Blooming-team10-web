@@ -1,8 +1,5 @@
 .bigGoalPage {
-    align-items: center;
-    width: 393px;
-    height: 852px;
-    background: #F6FBFF;
+
 }
 
 .showPrsnData {
@@ -81,6 +78,4 @@ input {
     background-color: #F6FBFF;
 }
 
-.snowman {
-    padding: 0px 0px 0px 260px;
-}
+
