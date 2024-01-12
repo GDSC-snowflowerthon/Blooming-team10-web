@@ -1,0 +1,24 @@
+#reqSignup {
+    color: #424242;
+    text-align: right;
+    font-family: Spoqa Han Sans Neo;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.112px;
+    position: relative;
+    top:-12px;
+}
+
+#reqSignup #aForSignup {
+    color: #42A5F5;
+    text-align: center;
+    font-family: Spoqa Han Sans Neo;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.112px;
+    text-decoration-line: underline;
+}

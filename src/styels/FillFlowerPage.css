@@ -1,79 +1,95 @@
-.fillFlowerPage {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-items: center;
+
+
+#xButton {
+    position: relative;
+    left : 316px;
+    top : 40px;
 }
 
-.pageTitle {
+#fillPageTitle {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 117px 30px 38px 30px;
+    margin-top: 60px;
     align-items: center;
 }
 
-.pageTitle #title{
+#fillPageTitle #title{
     color: #42A5F5;
     font-size: 30px;
     font-style: normal;
     font-weight: 700;
-    margin: 0px;
 }
 
-.pageTitle #percentage{
+#fillPageTitle #percentage{
     color: #464646;
     font-family: Pretendard;
     font-size: 30px;
     font-style: normal;
     font-weight: 700;
-    margin: 0px;
 }
 
 #branchWrapper {
     width: 180px;
     height: 494px;
-    margin-bottom: 30px;
-    
-
+    position: absolute;
+    top:200px;
 }
 
-#eraseBranch {
-    width: 55px;
-    height: 490px;
-    background: #F6FBFF;
-    z-index: 1;
+#oneBranchWrapper {
+    left:-158px;
+    top: -15px;
 }
 
-#fillBranch {
-    width: 55px;
-    height: 490px;
-    background: #42A5F5;
-
+#branchLine {
+    left: -106px;
+    top: -16px;
 }
 
-#branch, #eraseBranch, #fillBranch {
+
+#oneBranchWrapper, #branchLine {
     position:absolute;
 }
 
-#eraseBranch, #fillBranch {
-    margin-left: 36px;
+
+#datesWrapper{
+    display: inline-flex;
+    flex-wrap: nowrap;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+    width: 180px;
+    height: 494px;
+    position: absolute;
+    left : 184px;
+    top : 148px;
 }
 
-#dateTable{
-    position: relative;
+.date {
+    margin-top: 26px;
+    color: #767676;
+    font-family: Pretendard;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
 
+.hiddenText {
+    visibility: hidden;
+}
 
 button {
     all : unset;
 }
 
 #buttonWrapper{
+    position: absolute;
+    top:720px;
     text-align: center;
+    margin-top: 0px;
 }
 
-#complete {
+#beforeComplete {
     width: 189px;
     height: 48px;
     flex-shrink: 0;
@@ -81,5 +97,16 @@ button {
     border-radius: 10px;
     box-shadow: 0px 8px 10px -8px rgb(33, 35, 48);
     color: white;
+    text-align: center;
+}
+
+#afterComplete {
+    width: 189px;
+    height: 48px;
+    flex-shrink: 0;
+    background: #777a7b;
+    border-radius: 10px;
+    box-shadow: 0px 8px 10px -8px rgb(33, 35, 48);
+    color: rgb(44, 45, 46);
     text-align: center;
 }

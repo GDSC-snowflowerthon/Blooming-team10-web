@@ -1,40 +1,29 @@
 import "../styels/SmallGoalsTable.css";
+import "../styels/GlobalStyle.css";
+import {ReactComponent as GoToComplete} from "../assets/image/goToComplete.svg";
+import { useNavigate } from 'react-router-dom';
+import { useState } from "react";
 
-function SmallGoalsTable() {
+function SmallGoalsTable({data}) {
+
+  const navigate = useNavigate();
+
+  const subgoalListInData = data[3].subgoalList;
+  const bGoal = data[1].goalId;
+
+  //
+
   return (
     <div className="SmallGoalsTable">
-      <table className="table">
-        <tr>
-          <th className="rowNum">1</th>
-          <th className="smallGoal">물 1L 마시기</th>
-          <th className=""><a>▶</a></th>
-        </tr>
-        <tr>
-          <th className="rowNum">2</th>
-          <th className="smallGoal">물 1L 마시기</th>
-          <th className=""><a>▶</a></th>
-        </tr>
-        <tr>
-          <th className="rowNum">3</th>
-          <th className="smallGoal">물 1L 마시기</th>
-          <th className=""><a>▶</a></th>
-        </tr>
-        <tr>
-          <th className="rowNum">4</th>
-          <th className="smallGoal">물 1L 마시기</th>
-          <th className=""><a>▶</a></th>
-        </tr>
-        <tr>
-          <th className="rowNum">5</th>
-          <th className="smallGoal">물 1L 마시기</th>
-          <th className=""><a>▶</a></th>
-        </tr>
-        <tr>
-          <th className="rowNum">6</th>
-          <th className="smallGoal">물 1L 마시기</th>
-          <th className=""><a>▶</a></th>
-        </tr>
-      </table>
+      <div className="table">
+        {subgoalListInData.map((item, index) => (
+          <div key={index} className="tr" onClick={() => {navigate("/fill", {state : [bGoal, index]});}}>
+            <div className="td">{item.subgoalId}</div>
+            <div className="td" id="td2">{item.subgoalName}</div>
+            <div className="td"><GoToComplete/></div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

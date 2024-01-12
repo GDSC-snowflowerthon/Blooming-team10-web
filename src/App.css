@@ -12,12 +12,12 @@
 
 .App {
   padding : 0 27.5px;
-  width: "100%";
+  width: "393px";
   height: "852px";
   max-width: "$bp2";
   box-sizing: border-box;
   position: relative;
-  background-color: #F6FBFF;
+
 }
 
 
